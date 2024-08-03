@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatify</title>
+</head>
+<body background="GUI.png" style="position: relative; width: 284px; height: 550px; margin: 0; padding: 0;">
+    <style>
+        .toggle-switch {
+            position: absolute;
+            top: 45px;
+            right: 10px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 20px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: rgb(230, 187, 147);
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #000000;
+        }
+        input:checked + .slider:before {
+            transform: translateX(14px);
+        }
+    </style>
+    <div class="toggle-switch">
+        <label class="switch">
+            <input type="checkbox" id="toggle-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="container">
+        <div class="section">
+            <input type="text" id="username" name="username" style="position: absolute; top: 150px; left: 100px; width:150px; height: 25px;">
+            <input type="text" id="userkey" name="userkey" style="position: absolute; top: 182px; left: 100px; width: 150px; height: 25px;">
+            <button id="usersubmit" style="position: absolute; top: 216px; left: 157px; width: 100px; height: 30px;">SUBMIT</button>
+        </div>
+        <div class="section">
+            <input type="text" id="grouplink" name="grouplink" style="position: absolute; top: 290px; left: 100px; width: 150px; height: 25px;">
+            <input type="text" id="groupkey" name="groupkey" style="position: absolute; top: 321px; left: 100px; width: 150px; height: 25px;">
+            <button id="groupsubmit" style="position: absolute; top: 353px; left: 157px; width: 100px; height: 30px;">SUBMIT</button>
+        </div>
+        <div class="section">
+            <input type="password" id="commonpassword" name="commonpassword" style="position: absolute; top: 420px; left: 100px; width: 150px; height: 25px;" placeholder="Common Password">
+            <button id="passwordsubmit" style="position: absolute; top: 455px; left: 157px; width: 100px; height: 30px;">SET PASSWORD</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "name": "Chatify",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "logo.png"
+    },
+    "icons": {
+        "128": "logo.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://103.162.56.10/chat/group/403/*"],
+            "js": ["crypto.js", "content.js"]
+        }
+    ]
+}
